@@ -15,7 +15,7 @@ const clicked = (event) => {
             winningPlayer = playerWins();
             if(winningPlayer){
                 currPlayer === playerX ? alert("Congratulations! Player1 wins") : alert("Congratulations! Player2 wins");
-                playerName.innerText = currPlayer === playerX ? ("Congratulations! Player1 wins") : ("Congratulations! Player2 wins");
+                playerName.innerText = (currPlayer === playerX) ? ("Congratulations! Player1 wins") : ("Congratulations! Player2 wins");
             }
             if(!winningPlayer){
             playerName.innerText = currPlayer === playerX ? "Player2" : "Player1";
