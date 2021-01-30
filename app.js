@@ -15,12 +15,16 @@ const clicked = (event) => {
             winningPlayer = playerWins();
             if(winningPlayer){
                 currPlayer === playerX ? alert("Congratulations! Player1 wins") : alert("Congratulations! Player2 wins");
+                playerName.innerText = playerX ? alert("Congratulations! Player1 wins") : alert("Congratulations! Player2 wins");
             }
             if(!winningPlayer){
             playerName.innerText = currPlayer === playerX ? "Player2" : "Player1";
             currPlayer = currPlayer === playerX ? playerO : playerX;
             }
-            if(count == 9 && !winningPlayer){alert("Draw!"); winningPlayer = true;}
+            if(count == 9 && !winningPlayer){
+                    alert("Draw!"); winningPlayer = true;
+                    playerName.innerText = "Game Draw!";                
+                }
         }
     }
 }
